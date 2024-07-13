@@ -1,0 +1,56 @@
+
+# Check Directory Size:
+du -sh
+du -sha *
+
+# Check Disk Space:
+df -h
+
+# Count Files:
+find websites_data -type f -name "*.txt" | wc -l
+
+# Screen Commands:
+screen -ls
+screen -S (name)
+screen -r (name)
+screen -X -S [session_ID] quit
+screen -D -r dedup2
+CMD + A + D -> detach screen
+
+# Conda Commands:
+conda activate /mnt/HDFS1/llm/llmtelugu/conda/wayback
+conda create -p /path/to/your/env_name python=3.8
+
+# Check RAM:
+free -h
+watch -n 1 free -h
+
+# Wget Commands:
+wget -i downloads.txt
+wget --header="Authorization: Bearer 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" -i downloads.txt
+
+# Speedtest Commands:
+pip install --user speedtest-cli
+speedtest-cli
+
+# SSH and SCP Commands:
+ssh -p 22 myksingh@login.npsf.cdac.in
+scp -P 22 -r pdf_data myksingh@172.16.74.11:/nlsasfs/home/aipsc/myksingh/DEDUPLICATION_TELUGU/chunks
+
+# SLURM Commands:
+squeue -u myksingh -> list all jobs for myksingh user
+srun --nodes=1 --ntasks-per-node=64 --partition=cpup --time=07-00:00:00 --pty /bin/bash
+srun --pty --overlap --jobid 268569 bash
+
+# CPU Affinity:
+taskset -pc $$
+taskset -pc 0-400 $$ -> activating cores
+
+# Zip Commands:
+zip -r -0 -v /mnt/HDFS1/llm/llmtelugu/zips_chunks/datasets_data/nthgdy_oscar_small_text.zip /mnt/HDFS1/llm/llmtelugu/chunks/chunked_data/datasets_data/nthgdy_oscar_small_text
+unzip /nlsasfs/home/aipsc/myksingh/llmtelugu/zips/websites_data.zip -d /nlsasfs/home/aipsc/myksingh/llmtelugu/chunks_new/websites_data
+unzip filename.zip -d /path/to/destination
+
+# Python Commands:
+python minhash.py --path /mnt/HDFS1/llm/llmtelugu/chunks/chunked_csvs --output /mnt/HDFS1/llm/llmtelugu/test_out --threshold 0.8 --num_perm 250
+python -u train_tokenizer.py --data ../../../tokenization_data2/batch1 --save_path /nlsasfs/home/aipsc/myksingh/llmtelugu/tokenizer_results/batch1 > /nlsasfs/home/aipsc/myksingh/llmtelugu/tokenizer_results/Logs/logs_batch1.txt 2>&1 < /dev/null
