@@ -30,7 +30,7 @@
   <li><strong>pre_process.py</strong></li>
   <p>Using the list in step 1 it seperates out the dataset csv in two different folders (one with good data and other with bad data).</p>
   <li><strong>info_iden_csv_new_dates.py</strong></li>
-  <p>As we were also removing rows with dates in them, this code will again takes the list of vulgar words, dates, contacts, personal information and removes the items with dates in the list and creates a new list with vulgar words, contacts, personal information excluding dates. You can use either pre_process.py or remove_phone_nos.py to split the dataset CSV into two different folders using the new list. (Note: Use this code if you want to keep dates in your dataset.)</p>
+  <p>As we were also removing rows with dates in them, this code will again takes the list of vulgar words, dates, contacts, personal information and removes the items with dates in the list and creates a new list with vulgar words, contacts, personal information excluding dates. You can use either remove_phone_nos.py or pre_process.py to split the dataset CSV into two different folders using the new list. (Note: Use this code if you want to keep dates in your dataset).</p>
   <li><strong>antieng.py</strong></li>
   <p>It removes rows with english words which might not be related to the orignal text basing on a threshold, which can be set (default = 7, meaning rows with more than 7 English words will be separated into another csv).</p>
   <li><strong>detect_promotions.py</strong></li>
