@@ -22,7 +22,7 @@
 </ol>
 
 <h3>Cleaning:</h3>
-<p>Note: The below codes assumes that all your data is spread in csvs and each row in any csv will be containing a particular article. </p>
+<p>Note: The below codes assumes that all your data is spread in csvs and each row in any csv will be containing a single news article or similar text.</p>
 <p>The file "build.json" has list of vulgar words for Telugu all other languages, <strong>feel free to update it if you find any words missing</strong>.</p>
 <ol>
   <li><strong>info_iden_csv.py</strong></li>
@@ -36,14 +36,14 @@
   <li><strong>detect_promotions.py</strong></li>
   <p>It detects tags, promotions, ads & note it down in a log txt file.</p>
   <li><strong>finalr.py</strong></li>
-  <p>Removes the detected promotions & replace the links with |hyperlink| token.</p>
+  <p>Removes the detected promotions & replace the links with <|hyperlink|> token.</p>
   <li><strong>drop_links.py</strong></li>
   <p>It check all rows again for any remaining links (which may be missed by finalr.py) and then drops those rows.</p>
   
 </ol>
 
 <h3>Tokenization:</h3>
-<p>Note: The below codes assumes that all your data is spread in csvs and each row in any csv will be containing a particular article. </p>
+<p>Note: The following codes assume that all your data, whether used to train the tokenizer or to test its fertility scores, is stored in CSV files, with each row in any CSV containing a single news article or similar text.</p>
 <ol>
   <li><strong>remove_emotes.py</strong></li>
   <p>This code removes characters from CSV files that are not in Telugu or English, ensuring these characters do not appear in the tokenizer's vocabulary.</p>
