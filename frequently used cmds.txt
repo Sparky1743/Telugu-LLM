@@ -27,7 +27,7 @@ watch -n 1 free -h
 
 # Wget Commands:
 wget -i downloads.txt
-wget --header="Authorization: Bearer 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" -i downloads.txt
+wget --header="Authorization: Bearer hf_token" -i downloads.txt
 
 # Speedtest Commands:
 pip install --user speedtest-cli
