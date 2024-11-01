@@ -14,7 +14,7 @@
   <li><strong>minhash2_6.py</strong> -> from this code onwards, we start inter folder deduplication</li>
   <p>It calculates min-hashes for the sim-hashes calculated in previous steps and loads these min-hashes into a model which will calculate nearset neighbours for each document. The file paths of the nearest neighbours (for each document) will be outputted into one or more csv files, depending on the number of near duplicates.</p>
   <li><strong>rem_filter2.py</strong></li>
-  <p>Now the output of before code may have some false positives (files which are not near duplicates are also listed as near duplicates, this is the fault of the datasketch library we used, it is also clearly stated in their <a href="https://ekzhu.com/datasketch/lsh.html#">documentation</a>), this code will remove false positives from the previous code's output.</p>
+  <p>Now the output of before code may have some false positives (files which are not near duplicates are also listed as near duplicates, this is the fault of the datasketch library we used, it is also clearly stated in their <a href="https://ekzhu.com/datasketch/lsh.html#">MinHash LSH documentation</a>), this code will remove false positives from the previous code's output.</p>
   <li><strong>remove_7.py</strong></li>
   <p>This code will take the csvs outputted before (which contains paths of documents and their neighbours) and create a final list (in a txt file) of file paths to be removed from the dataset created after copy_after.py code. </p>
   <li><strong>finalremove.py</strong></li>
