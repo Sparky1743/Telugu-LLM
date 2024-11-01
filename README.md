@@ -42,3 +42,16 @@
   
 </ol>
 
+<h3>Tokenization:</h3>
+<p>Note: The below codes assumes that all your data is spread in csvs and each row in any csv will be containing a particular article. </p>
+<ol>
+  <li><strong>remove_emotes.py</strong></li>
+  <p>This code removes characters from CSV files that are not in Telugu or English, ensuring these characters do not appear in the tokenizer's vocabulary.</p>
+  <li><strong>tokenizer.py</strong></li>
+  <p>This code is used for training the tokenizer and expects a folder containing CSV files of data. Refer to <strong>frequently used cmds.txt</strong> for the terminal command to run the code.</p>
+  <li><strong>fertility_score.py</strong></li>
+  <p>This code is used to calculate the fertility scores of the trained tokenizer.</p>
+  
+</ol>
+
+
