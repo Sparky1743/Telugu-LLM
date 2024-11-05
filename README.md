@@ -51,6 +51,16 @@
   <p>This code is used for training the tokenizer and expects a folder containing CSV files of data. Refer to <strong>frequently used cmds.txt</strong> for the terminal command to run the code.</p>
   <li><strong>fertility_score.py</strong></li>
   <p>This code is used to calculate the fertility scores of the trained tokenizer.</p>
+  <li><strong>tokenize_data.py</strong></li>
+  <p>This code applies the tokenizer, trained in previous steps, to the text data. It expects CSV files with id and content columns and outputs CSV files with id, content, and tokens columns, where the tokens column contains the tokenizer encodings of content column. </p>
+  <li><strong>add_eos_token.py</strong></li>
+  <p>This code adds the EOS token to each row in the tokens column. </p>
+  <li><strong>tokens_2048.py</strong></li>
+  <p>This code splits the entries in the tokens column into segments of exactly 2048 tokens each and saves them in output CSV files with a single column. In each CSV, each row contains a list of exactly 2048 tokens. </p>
+  <li><strong>convert_to_parquet.py</strong></li>
+  <p>This code converts the CSV files obtained from the previous step into Parquet files. </p>
+  <li><strong>merge_datasets.py</strong></li>
+  <p>This code combines all the Parquet files from the previous step into a single Parquet file. </p>
   
 </ol>
 
