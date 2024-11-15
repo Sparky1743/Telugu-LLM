@@ -39,6 +39,8 @@
   <p>Removes the detected promotions & replace the links with <|hyperlink|> token.</p>
   <li><strong>drop_links.py</strong></li>
   <p>It check all rows again for any remaining links (which may be missed by finalr.py) and then drops those rows.</p>
+  <li><strong>ignore_case_bw</strong></li>
+  <p>Sometimes, certain inappropriate words appear in mixed-case letters, combining both lowercase and uppercase letters (specifically in English). This code is used as a final cleanup step to create new CSV files by removing rows containing such words.</p>
   
 </ol>
 
