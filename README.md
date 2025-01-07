@@ -100,4 +100,25 @@
   
 </ol>
 
+<h3>Pre-Training:</h3>
+<ol>
+  <li><strong>tt_splits.py</strong></li>
+  <p>This code is used for making train-test splits.</p>
+  
+  <li><strong>model_config.py</strong></li>
+  <p>This script sets up and initializes a Mistral-based causal language model with custom configurations, including vocabulary size, hidden layers, attention heads etc.</p>
+  
+  <li><strong>model_pretrain.py</strong></li>
+  <p>This script handles the pretraining of the large language model (LLM).</p>
+  
+</ol>
 
+<h3>Evaluation:</h3>
+<ol>
+  <li><strong>model_run.py</strong></li>
+  <p>This script is used for text generation using the trained language model. It takes input prompts, processes them through the model, and generates coherent and contextually relevant text outputs.</p>
+  
+  <li><strong>manual_ppl_check.py</strong></li>
+  <p>This script calculates the perplexity score of the language model, providing a measure of how well the model predicts a given dataset. Lower perplexity indicates better predictive performance.</p>
+  
+</ol>
