@@ -3,9 +3,9 @@
 <p>Codes for scraping data from various sites, converting pdfs to text and extracting text from existing datasets. List has been mentioned in the excel sheet.</p>
 
 <h3>Data Deduplication:</h3>
+<p>Note: it is necessary to have your dataset as only chunks of text files for the deduplication codes to work. Also it is better to have large number of these text files for efficient deduplication, hence it is recommended to curate your data article wise (each article in a txt file). </p>
+
 <ol>
-  <p>Note: it is necessary to have your dataset as only chunks of text files for the deduplication codes to work. Also it is better to have large number of these text files for efficient deduplication, hence it is recommended to curate your data article wise (each article in a txt file). </p>
-  
   <li><strong>hash.py</strong></li>
   <p>It finds all the text files in the given folder and generates their hash values using sim hash algorithm. These hash values are written in CSV files.</p>
  
