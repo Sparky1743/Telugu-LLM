@@ -55,4 +55,5 @@ unzip filename.zip -d /path/to/destination
 python minhash.py --path /mnt/HDFS1/llm/llmtelugu/chunks/chunked_csvs --output /mnt/HDFS1/llm/llmtelugu/test_out --threshold 0.8 --num_perm 250
 python -u train_tokenizer.py --data ../../../tokenization_data2/batch1 --save_path /nlsasfs/home/aipsc/myksingh/llmtelugu/tokenizer_results/batch1 > /nlsasfs/home/aipsc/myksingh/llmtelugu/tokenizer_results/Logs/logs_batch1.txt 2>&1 < /dev/null
 python fertility_score.py --tokenizer_path "/nlsasfs/home/aipsc/myksingh/telugu_llm/tokenizer/1.5GB" --data_path "/nlsasfs/home/aipsc/myksingh/telugu_llm/fert_testing" --column_name "content"
+OMP_NUM_THREADS=8 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 torchrun --nproc_per_node 8 --nnodes 1  model_pretrain.py
 
