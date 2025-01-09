@@ -40,6 +40,7 @@ scp -P 22 -r pdf_data myksingh@172.16.74.11:/nlsasfs/home/aipsc/myksingh/DEDUPLI
 # SLURM Commands:
 squeue -u myksingh -> list all jobs for myksingh user
 srun --nodes=1 --ntasks-per-node=64 --partition=cpup --time=07-00:00:00 --pty /bin/bash
+srun --nodes=1 --ntasks-per-node=192 --gres=gpu:A100-SXM4:8 --partition=priogp --time=07-00:00:00  --pty /bin/bash
 srun --pty --overlap --jobid 268569 bash
 
 # CPU Affinity:
